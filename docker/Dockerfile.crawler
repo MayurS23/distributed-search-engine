@@ -1,0 +1,7 @@
+FROM python:3.12-slim
+WORKDIR /app
+RUN apt-get update && apt-get install -y gcc libpq-dev && rm -rf /var/lib/apt/lists/*
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+CMD ["python", "-c", "import asyncio; from crawler.crawler import Crawler; from storage.postgres_client import init_db; import os; async def main(): await init_db(); seeds=os.environ.get('SEED_URLS','https://example.com').split(','); await Crawler().run(seeds); asyncio.run(main())"]
