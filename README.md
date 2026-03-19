@@ -1,4 +1,4 @@
-# 🔍 Distributed Search Engine
+#  Distributed Search Engine
 
 > A production-grade distributed search engine built from scratch in Python — crawls web pages, builds a sharded inverted index, and serves ranked results via a REST API. Implements the core concepts behind Google-scale search systems.
 
@@ -275,3 +275,7 @@ Every posting stores token positions enabling phrase queries like "distributed s
 **Mayur S** — [@MayurS23](https://github.com/MayurS23)
 
 If you found this useful, please give it a star on GitHub!
+
+<div align="center">
+Built with ❤️ by <a href="https://github.com/MayurS23">MayurS23</a>
+</div>
